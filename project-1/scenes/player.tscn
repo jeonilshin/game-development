@@ -213,6 +213,21 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_i0k5g"]
 radius = 5.0
 
+[sub_resource type="Animation" id="Animation_enar6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Jump/Jump_SFX:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_5xnpd"]
 resource_name = "jump"
 length = 0.1
@@ -229,26 +244,14 @@ tracks/0/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_enar6"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Jump/Jump_SFX:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lip1n"]
 _data = {
 "RESET": SubResource("Animation_enar6"),
 "jump": SubResource("Animation_5xnpd")
 }
+
+[sub_resource type="Animation" id="Animation_relme"]
+length = 0.001
 
 [sub_resource type="Animation" id="Animation_avlui"]
 resource_name = "death"
@@ -265,9 +268,6 @@ tracks/0/keys = {
 "update": 1,
 "values": [true]
 }
-
-[sub_resource type="Animation" id="Animation_relme"]
-length = 0.001
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1mew4"]
 _data = {
