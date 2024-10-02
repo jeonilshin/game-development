@@ -1,15 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://rgrk4vko3ug2"]
 
-[ext_resource type="PackedScene" uid="uid://yhb81wd31ckj" path="res://scenes/component/BuildingComponent.tscn" id="1_u20d2"]
+[ext_resource type="PackedScene" uid="uid://yhb81wd31ckj" path="res://scenes/component/BuildingComponent.tscn" id="1_o8g7c"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_rir0s"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_w021i"]
 size = Vector2(64, 64)
 
 [node name="Base" type="Node2D"]
+y_sort_enabled = true
 
-[node name="BuildingComponent" parent="." instance=ExtResource("1_u20d2")]
-BuildableRadious = 2
+[node name="BuildingComponent" parent="." instance=ExtResource("1_o8g7c")]
+buildingResourcePath = "res://resources/building/base.tres"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_rir0s")
+position = Vector2(32, 32)
+texture = SubResource("PlaceholderTexture2D_w021i")
 centered = false
+offset = Vector2(-32, -32)
